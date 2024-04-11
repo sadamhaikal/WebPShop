@@ -65,6 +65,19 @@ The radio buttons offer several levels of compression effort:
     | Default |          4          |      No      |           75           |
     | Slowest |          6          |      Yes     |          100           |
 
+Animations are supported through a specific layer naming pattern:
+
+*   `FrameX (123 ms)` (last frame in chronological order)
+*   ...
+*   `Frame3 (1111 ms)` (third frame, shown for 1.111 seconds)
+*   `Frame2 (321 ms)` (second frame, shown for 0.321 seconds)
+*   `Frame1 (2000 ms)` (first frame, shown during the first two seconds of the
+    animation)
+
+All layers must be rasterized, of the same dimensions, and have no filter, mask,
+group, link, etc. Please see the
+[detailed guidelines](https://github.com/webmproject/WebPShop/issues/60#issue-2237550279).
+
 ## Limitations
 
 *   Only English is currently supported.
